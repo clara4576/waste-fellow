@@ -5,37 +5,68 @@
 
     <style>
         body {
-            background-color: black;
-            color: white;
-            text-align: center;
-            font-family: Arial, sans-serif;
-            margin-top: 50px;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            font-family: 'Segoe UI', sans-serif;
+
+            /* 🌈 Gradient background */
+            background: linear-gradient(135deg, #1e1e2f, #3a3a6a, #6a5acd);
+            background-size: 300% 300%;
+            animation: gradientMove 8s ease infinite;
+
+            color: #f1f1f1;
+        }
+
+        /* 🌊 Smooth moving gradient */
+        @keyframes gradientMove {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
         }
 
         img {
-            width: 250px;
-            border-radius: 10px;
-            margin-bottom: 20px;
-            animation: fadeIn 2s ease-in-out;
+            width: 220px;
+            border-radius: 15px;
+            margin-bottom: 25px;
+
+            /* ✨ Floating effect */
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
         }
 
         h1 {
-            font-size: 40px;
-            color: red;
-            text-shadow: 0 0 10px red, 0 0 20px red;
-            animation: fadeIn 3s ease-in-out;
+            font-size: 38px;
+            margin: 10px;
+
+            /* ✨ Soft glow (not harsh) */
+            color: #ffffff;
+            text-shadow: 0 0 8px rgba(255,255,255,0.4);
+
+            animation: fadeIn 2s ease;
         }
 
         p {
-            font-size: 24px;
-            color: yellow;
-            animation: fadeIn 4s ease-in-out;
+            font-size: 22px;
+            margin: 5px;
+            color: #d1d1ff;
+
+            animation: fadeIn 3s ease;
         }
 
+        /* 🎬 Fade-in */
         @keyframes fadeIn {
             from {
                 opacity: 0;
-                transform: translateY(-20px);
+                transform: translateY(15px);
             }
             to {
                 opacity: 1;
@@ -47,11 +78,13 @@
 </head>
 <body>
 
-    <img src="angry.gif" alt="gif">
 
-    <h1>Waste Fellow</h1>
-    <p> Ayna memu chesina cake endhuku tintav le </p>
-    <p>Hate youuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu</p>
+    <img src="angru.gif" alt="my gif">
+
+    <h1>Waste Fellow!! Pe</h1>
+    <pre>
+    Ayna memu chesina cake endhuku tintav le 
+    Hate youuuuuuuuuuuuuuuuuu</pre>
 
 </body>
 </html>
